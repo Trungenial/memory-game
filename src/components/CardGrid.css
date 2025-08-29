@@ -1,0 +1,10 @@
+.card-grid {
+    max-width: 50%;
+    min-height: 30rem;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-block: 2rem;
+    background-color: var(--background-color);
+}

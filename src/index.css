@@ -1,0 +1,41 @@
+:root {
+    font-family: "Courier New", Courier, monospace;
+    --background-color: #1b1524;
+    --color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 1.5rem;
+}
+
+button {
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5em 0.8em;
+    background-color: var(--background-color);
+    border: 1px solid white;
+    color: var(--color);
+    cursor: pointer;
+    margin-block: 0.5rem;
+    border-radius: 0.3rem;
+    font-weight: 700;
+}
+
+p {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
