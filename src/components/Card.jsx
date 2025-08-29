@@ -1,15 +1,22 @@
 import { useState } from "react";
 import "./Card.css";
 
-export default function Card() {
+export default function Card({ sourceImg, name, handleChoose, choose }) {
     const [isFront, setIsFront] = useState(false);
 
-    const handleClick = () => {
-        !isFront ? setIsFront(true) : setIsFront(false);
+    const handleClick = (e) => {
+        // !isFront ? setIsFront(true) : setIsFront(false);
+        if (!isFront) {
+            setIsFront(true);
+            handleChoose(e);
+        } else {
+            setIsFront(false);
+        }
     };
+    console.log(choose);
 
     return (
-        <div className="card" onClick={handleClick}>
+        <div className="card" onClick={handleClick} data-name={name}>
             <div
                 className={
                     "card__front" +
@@ -17,7 +24,7 @@ export default function Card() {
                     (isFront ? "card__front-show" : "card__front-hide")
                 }
             >
-                ❓
+                <img src={sourceImg} alt="." />
             </div>
             <div
                 className={
