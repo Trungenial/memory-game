@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Card.css";
 
-export default function Card({ sourceImg, name, handleChoose, choose }) {
+export default function Card({
+    identify,
+    sourceImg,
+    name,
+    handleChoose,
+    choose1,
+    choose2,
+}) {
     const [isFront, setIsFront] = useState(false);
 
     const handleClick = (e) => {
@@ -9,14 +16,27 @@ export default function Card({ sourceImg, name, handleChoose, choose }) {
         if (!isFront) {
             setIsFront(true);
             handleChoose(e);
-        } else {
-            setIsFront(false);
         }
     };
-    console.log(choose);
+
+    if (choose2.name !== "" && choose1.name !== choose2.name) {
+        if (
+            choose1.id === identify.toString() ||
+            choose2.id === identify.toString()
+        ) {
+            setTimeout(() => {
+                setIsFront(false);
+            }, 900);
+        }
+    }
 
     return (
-        <div className="card" onClick={handleClick} data-name={name}>
+        <div
+            className="card"
+            onClick={handleClick}
+            data-name={name}
+            id={identify}
+        >
             <div
                 className={
                     "card__front" +
