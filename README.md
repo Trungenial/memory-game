@@ -1,12 +1,65 @@
-# React + Vite
+# Magic Match - A Pokémon Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple and fun memory matching game built with React. The objective is to find all matching pairs of Pokémon cards by flipping them over.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Dynamic Card Grid**: Cards are dynamically fetched from the [PokeAPI](https://pokeapi.co/).
+-   **Card Flip Animation**: Smooth CSS animations for flipping cards.
+-   **Match Tracking**: The game keeps track of matched pairs.
+-   **Turn Counter**: Counts the number of attempts made.
+-   **New Game**: A "New Game" button to shuffle the deck and start a new round.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **React**: A JavaScript library for building user interfaces.
+-   **Vite**: A modern frontend build tool.
+-   **PokeAPI**: The RESTful Pokémon API for fetching card data.
+-   **CSS**: Custom styling for the game board and card animations.
+
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You need to have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) (or yarn) installed on your machine.
+
+### Installation
+
+1.  Clone the repository to your local machine:
+    ```sh
+    git clone <YOUR_REPOSITORY_URL>
+    ```
+2.  Navigate into the project directory:
+    ```sh
+    cd memory-game
+    ```
+3.  Install the required dependencies:
+    ```sh
+    npm install
+    ```
+
+### Running the Application
+
+To start the development server, run the following command:
+
+```sh
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) (or the port specified in your console) to view it in your browser.
+
+## Project Structure
+
+```
+/src
+|-- assets/         # Static assets like images
+|-- components/     # Reusable React components
+|   |-- Card.jsx
+|   |-- CardGrid.jsx
+|   `-- ...
+|-- App.jsx         # Main application component
+|-- main.jsx        # Entry point of the application
+`-- ...
+```
